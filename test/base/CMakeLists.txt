@@ -4,3 +4,4 @@ macro (add_base_test_exec exec_name)
 endmacro (add_base_test_exec)
 
 add_base_test_exec(FileUtil)
+add_base_test_exec(LogFile)
