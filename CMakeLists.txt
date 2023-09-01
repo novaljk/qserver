@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.21)
+project(qserver
+        VERSION 2023.9
+        LANGUAGES C CXX)
+
+set(CMAKE_BUILD_TYPE "Debug")
+
+
+set(CMAKE_CXX_COMPILER "g++")
+set(CMAKE_CXX_STANDARD 11)
+
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+set(QSERVER_SRC_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/src/include)
+set(QSERVER_TEST_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/test/include)
+
+include_directories(${BUSTUB_SRC_INCLUDE_DIR} ${BUSTUB_TEST_INCLUDE_DIR})
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src)
+add_subdirectory(${PROJECT_SOURCE_DIR}/test)
