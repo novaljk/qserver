@@ -1,4 +1,6 @@
 macro (add_base_test_exec exec_name)
-    add_executable ("${exec_name}" "${exec_name}.cpp")
-    target_link_libraries ("${exec_name}" qserver_base  ${ARGN})
+    add_executable ("${exec_name}_test" "Test${exec_name}.cpp")
+    target_link_libraries ("${exec_name}_test" qserver_base  ${ARGN})
 endmacro (add_base_test_exec)
+
+add_base_test_exec(FileUtil)
