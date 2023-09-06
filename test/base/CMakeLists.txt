@@ -5,3 +5,6 @@ endmacro (add_base_test_exec)
 
 add_base_test_exec(FileUtil)
 add_base_test_exec(LogFile)
+add_base_test_exec(Thread)
+add_base_test_exec(CountDownLatch)
+add_base_test_exec(AsyncLogging)
